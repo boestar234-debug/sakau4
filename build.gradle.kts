@@ -28,12 +28,9 @@ subprojects {
     apply(plugin = "kotlin-android")
     apply(plugin = "com.lagradost.cloudstream3.gradle")
 
-    extensions.configure<CloudstreamExtension>("cloudstream") {
-        setRepo(
-            "https://raw.githubusercontent.com/boestar234-debug/sakau4/builds/",
-            "sakau4",
-            "Sakau4 Cloudstream Extensions"
-        )
+    
+extensions.configure<CloudstreamExtension>("cloudstream") {
+        setRepo("github", "boestar234-debug", "sakau4")
     }
 
     extensions.configure<BaseExtension>("android") {
