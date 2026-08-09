@@ -1,3 +1,5 @@
+import com.lagradost.cloudstream3.gradle.CloudstreamExtension
+
 buildscript {
     repositories {
         google()
@@ -17,4 +19,10 @@ allprojects {
         mavenCentral()
         maven("https://jitpack.io")
     }
+}
+
+apply(plugin = "com.lagradost.cloudstream3.gradle")
+
+extensions.configure<CloudstreamExtension>("cloudstream") {
+    setRepo("boestar234-debug", "sakau4", "github")
 }

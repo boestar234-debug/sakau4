@@ -4,11 +4,6 @@ plugins {
     id("com.lagradost.cloudstream3.gradle")
 }
 
-cloudstream {
-    // The fixed repository setting!
-    setRepo("boestar234-debug", "sakau4", "github")
-}
-
 android {
     namespace = "com.sakau2.twiceflix"
     compileSdk = 34
