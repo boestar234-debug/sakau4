@@ -18,3 +18,5 @@ allprojects {
         maven("https://jitpack.io")
     }
 }
+
+apply(plugin = "com.lagradost.cloudstream3.gradle")
