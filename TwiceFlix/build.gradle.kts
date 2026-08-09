@@ -1,7 +1,8 @@
+import com.lagradost.cloudstream3.gradle.CloudstreamExtension
+
 plugins {
     id("com.android.library")
     id("kotlin-android")
-    id("com.lagradost.cloudstream3.gradle")
 }
 
 android {
@@ -17,6 +18,12 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+}
+
+apply(plugin = "com.lagradost.cloudstream3.gradle")
+
+extensions.configure<CloudstreamExtension>("cloudstream") {
+    setRepo("boestar234-debug", "sakau4", "github")
 }
 
 dependencies {

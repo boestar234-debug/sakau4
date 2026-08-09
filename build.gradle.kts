@@ -1,10 +1,3 @@
-import com.lagradost.cloudstream3.gradle.CloudstreamExtension
-
-plugins {
-    id("com.android.library") version "8.1.0" apply false
-    id("org.jetbrains.kotlin.android") version "1.9.0" apply false
-}
-
 buildscript {
     repositories {
         google()
@@ -12,7 +5,8 @@ buildscript {
         maven("https://jitpack.io")
     }
     dependencies {
-        // Leave Cloudstream here so the `make` command works
+        classpath("com.android.tools.build:gradle:8.1.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
         classpath("com.github.recloudstream:gradle:-SNAPSHOT")
     }
 }
@@ -23,10 +17,4 @@ allprojects {
         mavenCentral()
         maven("https://jitpack.io")
     }
-}
-
-apply(plugin = "com.lagradost.cloudstream3.gradle")
-
-extensions.configure<CloudstreamExtension>("cloudstream") {
-    setRepo("boestar234-debug", "sakau4", "github")
 }
