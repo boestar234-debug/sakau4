@@ -26,5 +26,5 @@ android {
 
 dependencies {
     compileOnly("com.github.recloudstream:cloudstream:pre-release")
-    // Jsoup is built into Cloudstream and used for scraping HTML
+
 }
