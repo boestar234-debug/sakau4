@@ -7,7 +7,7 @@ import com.lagradost.cloudstream3.plugins.Plugin
 @CloudstreamPlugin
 class TwiceflixPlugin: Plugin() {
     override fun load(context: Context) {
-        // Registers your provider when the app loads the plugin
+        
         registerMainAPI(TwiceflixProvider())
     }
 }
