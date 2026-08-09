@@ -1,5 +1,10 @@
 import com.lagradost.cloudstream3.gradle.CloudstreamExtension
 
+plugins {
+    id("com.android.library") version "8.1.0" apply false
+    id("org.jetbrains.kotlin.android") version "1.9.0" apply false
+}
+
 buildscript {
     repositories {
         google()
@@ -7,8 +12,7 @@ buildscript {
         maven("https://jitpack.io")
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:8.1.0")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
+        // Leave Cloudstream here so the `make` command works
         classpath("com.github.recloudstream:gradle:-SNAPSHOT")
     }
 }
